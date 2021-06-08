@@ -1,5 +1,5 @@
 import React from "react"
-import { connect, Global, css, styled } from "frontity"
+import { connect, Global, css, styled, Head } from "frontity";
 import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
 import List from "./list"
@@ -14,6 +14,13 @@ const Root = ({ state, actions }) => {
 
   return (
     <>
+    <Head>
+        <title>AgriWebb 3.0</title>
+        <meta
+          name="description"
+          content="Lets get it"
+        />
+      </Head>
      <Global
         styles={css`
             * {
