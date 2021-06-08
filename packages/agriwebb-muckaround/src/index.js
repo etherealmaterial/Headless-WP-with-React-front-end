@@ -2,7 +2,7 @@ import Root from "./components"
 import link from "@frontity/html2react/processors/link";
 
 const myFirstTheme = {
-  name: "my-first-theme",
+  name: "agriwebb-muckaround",
   roots: {
     theme: Root,
   },
