@@ -48,7 +48,7 @@ const Root = ({ state, actions }) => {
           }
          <Menu>
             <Link link="/">Home</Link>
-            <Link link="/destinations">Destinations</Link>
+            <Link link="/customer-stories">Customer Stories</Link>
             <Link link="/about-us">About Us</Link>
         </Menu>
         </HeaderContent>
