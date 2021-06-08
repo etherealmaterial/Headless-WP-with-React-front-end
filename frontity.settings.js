@@ -15,12 +15,12 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org",
+          "url": "https://www.agriwebb.com",
           "postTypes": [
             {
-              type: "destinations",
-              endpoint: "destinations",
-              archive: "/destinations"
+              type: "customer-story",
+              endpoint: "customer-story",
+              archive: "/customer-story"
             }
           ]
         }
