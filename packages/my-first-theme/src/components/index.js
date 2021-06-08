@@ -5,8 +5,8 @@ import Switch from "@frontity/components/switch"
 import List from "./list"
 import Post from "./post"
 import Page from "./page"
-
-
+import Loading from "./loading"
+import Error from "./error"
 
 
 const Root = ({ state, actions }) => {
@@ -39,20 +39,23 @@ const Root = ({ state, actions }) => {
               <Button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</Button>
             )
           }
-          <Menu>
+         <Menu>
             <Link link="/">Home</Link>
-            <Link link="/page/2">More posts</Link>
+            <Link link="/destinations">Destinations</Link>
             <Link link="/about-us">About Us</Link>
-          </Menu>
+        </Menu>
         </HeaderContent>
       </Header>
-      <Main>
-        <Switch>
-          <List when={data.isArchive} />
-          <Post when={data.isPost} />
-          <Page when={data.isPage} />
-        </Switch>
-      </Main>
+        <Main>
+            <Switch>
+                <Loading when={data.isFetching} />
+                <List when={data.isArchive} />
+                <Page when={data.isPage} />
+                <Post when={data.isPost} />
+                <Page when={data.isDestinations} />
+                <Error when={data.isError} />
+            </Switch>
+        </Main>
     </>
   )
 }
